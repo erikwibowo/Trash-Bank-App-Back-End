@@ -14,10 +14,9 @@ export class UserService {
         password: await hash(createUserDto.password, 10),
       },
     });
-    const { password, ...user } = newUser;
     return {
       message: 'User created',
-      data: user,
+      data: newUser,
       statusCode: HttpStatus.CREATED,
     };
   }
