@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "dist/main.js", // Path to your compiled Nest.js main file
+        "use": "@vercel/node" // Specifies that Vercel should use Node.js runtime
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "dist/main.js" // Path to your compiled Nest.js main file
+      }
+    ]
+  }  
